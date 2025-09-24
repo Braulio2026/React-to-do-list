@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import "./App.css"
 // import "./style.css"
 
@@ -11,17 +9,13 @@ export default function app() {
   function handleSubmit(e) {
      e.preventDefault()
 
-     setTodos([
-      ...todos,
+     setTodos(currentTodos => {
+      return [
+        ...currentTodos,
       {id: crypto.randomUUID(), title: newItem, completed:
         false },
-     ])
-
-     setTodos([
-      ...todos,
-      {id: crypto.randomUUID(), title: newItem, completed:
-        false },
-     ])
+      ]
+      })
   }
   
    return (
@@ -38,37 +32,18 @@ export default function app() {
    </div>
    <button className="btn">Add</button>
 </form>
-
    <h1 className="headre">To do list</h1>
     <ul className="list">
-      <li>
+      {todos.map(todo => {
+        return  <li>
         <label>
-         <input type="checkbox"/>
+         <input type="checkbox" ckecked={todos.completed}/>
+         {todos.title}
          item 1
         </label>
         <button className="btn btn-danger">Delete</button>
       </li>
-      <li>
-        <label>
-         <input type="checkbox" />
-         item 2
-        </label>
-        <button className="btn btn-danger">Delete</button>
-      </li>
-      <li>
-        <label>
-         <input type="checkbox" />
-         item 3
-        </label>
-        <button className="btn btn-danger">Delete</button>
-      </li>
-      <li>
-        <label>
-         <input type="checkbox" />
-         item 4
-        </label>
-        <button className="btn btn-danger">Delete</button>
-      </li>
+      })}      
    </ul>
   </>
  )
