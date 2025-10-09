@@ -2,10 +2,21 @@ import { useState } from 'react'
 import "./App.css"
 import "./index.css"
 import { NewTodoForm } from "./newTodoForm"
+import { TodoList } from "./TodoList"
 
 export default function app() { 
   const [todos, setTodos] = useState([])
- 
+  // (() => {
+  //   const localValue = localStorage.getItem("ITEMS")
+  //   if (localValue == null) return []
+
+  //   return JSON.parse(localValue)
+  // })
+
+  // useEffect(() => {
+  //   localStorage.setItem("ITEMS", JSON.stringify(todos))
+  // }, [todos])
+
   function addTodo(title) {
     setTodos(currentTodos => {
       return [
@@ -36,29 +47,10 @@ function deleteTodo(id) {
 
    return (
 <>
-<NewTodoForm onSubmit={addTodo}/>
-   <h1 className="header">To do list</h1>
-    <ul className="list">
-      {todos.length === 0 && "NO TODO LIST!"}
-      {todos.map(todo => {
-        return (
-      <li key={todo.id}>
-      <label>
-        <input 
-         type="checkbox" ckecked={todo.completed}
-         onChange={e => toggleTodo(todo.id, e.target.checked )}
-         />
-         {todo.title}
-      </label>
-      <button 
-         onClick={() => deleteTodo(todo.id)}
-         className="btn btn-danger">
-          Delete
-         </button>
-      </li>
-        )
-      })}      
-   </ul>
+  <NewTodoForm onSubmit={addTodo}/>
+    <h1 className="header">To do list</h1>
+   <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo=
+   {deleteTodo} />
   </>
    )
 }
