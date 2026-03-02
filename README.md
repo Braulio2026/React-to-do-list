@@ -1,16 +1,75 @@
-## Hi there 👋
-The React code is a library from JS which that you will get and find funny things interesting and amusing.
-<!--
-**Braulioortiz/Braulioortiz** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# 🚀 React To-Do List
 
-Here are some ideas to get you started:
+Hi! 👋 This repository contains a React-based To-Do List application built to practice core React concepts and modern JavaScript.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## 🛠️ Tech Stack
+
+* React
+* JavaScript (ES6+)
+* HTML5 & CSS3
+* Git & GitHub
+
+---
+
+## ✨ Features
+
+* Add tasks
+* Delete tasks
+* Component-based structure
+* Clean and organised code
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the repository
+
+```
+git clone https://github.com/Braulio2026/React-to-do-list.git
+```
+
+### 2️⃣ Navigate to the app folder
+
+```
+cd React-to-do-list/my-react-app
+```
+
+### 3️⃣ Install dependencies
+
+```
+npm install
+```
+
+### 4️⃣ Start the development server
+
+```
+npm start
+```
+
+The app will run at:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 🎯 Purpose
+
+This project demonstrates:
+
+* Understanding of React fundamentals
+* State management basics
+* Structured commit history using feature-based commits
+
+---
+
+## 👨‍💻 Author
+
+Braulio Ortiz
+
+---
+
+Thanks for visiting this repository 🚀
